@@ -1,0 +1,35 @@
+<project name = "usermanagement" basedir = "." default = "test">
+	
+	<property name = "main-java-dir" value = "${basedir}/src/main/java"/>
+	
+	<property name = "test-java-dir" value = "${basedir}/src/test/java"/>
+	
+	<property name = "build-dir" value = "${basedir}/bin"/>
+	
+	<target name = "clean">
+		<delete dir = "${build-dir}"/>
+	</target>
+	
+	<target name = "init">
+		<mkdir dir = "${build-dir}"/>
+	</target>
+	
+	<target name = "compile" depends = "init">
+		<javac srcdir = "${main-java-dir}" destdir = "${build-dir}"/>
+	</target>
+	
+	<target name = "test-compile" depends = "init">
+		<javac srcdir = "${main-java-dir}" destdir = "${build-dir}"/>
+	</target>
+	
+	<target name = "test" depends = "test-compile">
+		<junit>
+			<classpath>
+				<pathelement location = "${build-dir}"/>
+			</classpath>
+			<formatter type = "plain"/>
+			<test name = "kn_14_5.obykhvost.usermanagement.UserTest"/>
+		</junit>
+	</target>
+	
+</project>
