@@ -29,7 +29,10 @@ public class UserTest {
 	public void testGetDateOfBirth()
 	{
 		user.setDateOfBirth(dateOfBirth);
-		assertEquals(2016 - 1984, user.getAge());
+		Calendar current = Calendar.getInstance(), birth = Calendar.getInstance();
+		current.setTime(new Date());
+		birth.setTime(dateOfBirth);
+		assertEquals(current.get(Calendar.YEAR) - birth.get(Calendar.YEAR), user.getAge());
 	}
 
 }
