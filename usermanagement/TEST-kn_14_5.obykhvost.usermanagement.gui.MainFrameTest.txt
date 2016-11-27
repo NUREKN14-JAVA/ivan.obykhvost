@@ -1,0 +1,140 @@
+Testsuite: kn_14_5.obykhvost.usermanagement.gui.MainFrameTest
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.069 sec
+------------- Standard Error -----------------
+java.lang.NullPointerException
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.NullPointerException
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.NullPointerException
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.NullPointerException
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.NullPointerException
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+------------- ---------------- ---------------
+
+Testcase: testEditUser took 0.212 sec
+	Caused an ERROR
+interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn_14_5.obykhvost.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn_14_5.obykhvost.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:36)
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testAddUser took 0.203 sec
+	Caused an ERROR
+interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn_14_5.obykhvost.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn_14_5.obykhvost.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:36)
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testBrowseControls took 0.212 sec
+	Caused an ERROR
+interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn_14_5.obykhvost.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn_14_5.obykhvost.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:36)
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testUserDetails took 0.226 sec
+	Caused an ERROR
+interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn_14_5.obykhvost.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn_14_5.obykhvost.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:36)
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testDeleteUser took 0.208 sec
+	Caused an ERROR
+interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn_14_5.obykhvost.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn_14_5.obykhvost.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:36)
+	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+

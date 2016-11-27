@@ -29,6 +29,9 @@
 			</classpath>
 			<formatter type = "plain"/>
 			<test name = "kn_14_5.obykhvost.usermanagement.UserTest"/>
+			<test name = "kn_14_5.obykhvost.usermanagement.db.DaoFactoryTest"/>
+			<test name = "kn_14_5.obykhvost.usermanagement.db.HsqldbUserDaoTest"/>
+			<test name = "kn_14_5.obykhvost.usermanagement.gui.MainFrameTest"/>
 		</junit>
 	</target>
 	

@@ -3,22 +3,22 @@ package kn_14_5.obykhvost.usermanagement.db;
 import java.io.IOException;
 import java.util.Properties;
 
-public class DaoFactory {
-	final private Properties properties;
-	final private String USER_DAO = "dao.kn_14_5.obykhvost.usermanagement.db.UserDao";
+public abstract class DaoFactory {
+	private static final String DAO_FACTORY = "dao.factory";
+	protected static Properties properties;
+	protected final String USER_DAO = "dao.kn_14_5.obykhvost.usermanagement.db.UserDao";
 	final private String CON_DRIVER = "connection.driver";
 	final private String CON_URL = "connection.url";
 	final private String CON_USER = "connection.user";
 	final private String CON_PASSWORD = "connection.password";
-	static private final DaoFactory INSTANCE = new DaoFactory();
+	static private DaoFactory instance;
 	
-	public static DaoFactory getInstance() { return INSTANCE; }
-
-	private DaoFactory() {
+	static
+	{
 		properties = new Properties();
 		try
 		{
-			properties.load(getClass().getClassLoader().getResourceAsStream("settings.properties"));
+			properties.load(DaoFactory.class.getClassLoader().getResourceAsStream("settings.properties"));
 		}
 		catch(IOException ioe)
 		{
@@ -26,7 +26,45 @@ public class DaoFactory {
 		}
 	}
 	
-	private ConnectionFactory getConnectionFactory()
+	public static synchronized DaoFactory getInstance() 
+	{
+		if(instance == null)
+		{
+			try
+			{
+				Class factoryClass = Class.forName(properties.getProperty(DAO_FACTORY));
+				instance = (DaoFactory) factoryClass.newInstance();
+			}
+			catch(ClassNotFoundException cnfe)
+			{
+				throw new RuntimeException(cnfe);
+			}
+			catch(IllegalAccessException iae)
+			{
+				throw new RuntimeException(iae);
+			}
+			catch(InstantiationException ie)
+			{
+				throw new RuntimeException(ie);
+			}
+		}
+		return instance; 
+	}
+
+	protected DaoFactory() { }
+	
+	public static void init(Properties prop)
+	{
+		properties = prop;
+		instance = null;
+	}
+	
+	protected ConnectionFactory getConnectionFactory(Properties properties)
+	{
+		return new ConnectionFactoryImpl(properties);
+	}
+	
+	protected ConnectionFactory getConnectionFactory()
 	{
 		String driver = this.properties.getProperty(this.CON_DRIVER);
 		String url = this.properties.getProperty(this.CON_URL);
@@ -35,28 +73,6 @@ public class DaoFactory {
 		return new ConnectionFactoryImpl(driver, url, user, password);
 	}
 	
-	public UserDao getUserDao()
-	{
-		UserDao result = null;
-		try
-		{
-			Class clazz = Class.forName(properties.getProperty(this.USER_DAO));
-			result = (UserDao)(clazz.newInstance());
-			result.setConnectionFactory(getConnectionFactory());
-		}
-		catch(ClassNotFoundException cnfe)
-		{
-			throw new RuntimeException(cnfe);
-		}
-		catch(IllegalAccessException iae)
-		{
-			throw new RuntimeException(iae);
-		}
-		catch(InstantiationException ie)
-		{
-			throw new RuntimeException(ie);
-		}
-		return result;
-	}
+	public abstract UserDao getUserDao();
 
 }
