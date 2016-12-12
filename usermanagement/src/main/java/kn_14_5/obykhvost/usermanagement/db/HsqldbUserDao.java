@@ -12,6 +12,7 @@ import java.sql.Date;
 import kn_14_5.obykhvost.usermanagement.User;
 
 class HsqldbUserDao implements UserDao {
+	final private String SELECT_BY_NAMES = "SELECT * FROM users WHERE firstname = ? AND lastname = ?";
 	private ConnectionFactory connectionFactory;
 	final private String INSERT_QUERY = "INSERT INTO users (firstname, lastname, dateofbirth) VALUES (?, ?, ?)";
 	final private String SELECT_ALL_QUERY = "SELECT * FROM users";
@@ -173,6 +174,37 @@ class HsqldbUserDao implements UserDao {
 
 	public void setConnectionFactory(ConnectionFactory connectionFactory) {
 		this.connectionFactory = connectionFactory;
+	}
+
+	@Override
+	public Collection find(String firstName, String lastName) throws DatabaseException {
+		Collection result = new LinkedList();
+		try
+		{
+			Connection connection = this.connectionFactory.createConnection();
+			PreparedStatement statement = connection.prepareStatement(SELECT_BY_NAMES);
+			statement.setString(1, firstName);
+			statement.setString(2, lastName);
+			ResultSet resultSet = statement.executeQuery();
+			while(resultSet.next())
+			{
+				User user = new User();
+				user.setId(new Long(resultSet.getLong(1)));
+				user.setFirstName(resultSet.getString(2));
+				user.setLastName(resultSet.getString(3));
+				user.setDateOfBirth(resultSet.getDate(4));
+				result.add(user);
+			}
+		}
+		catch(DatabaseException de)
+		{
+			throw de;
+		}
+		catch(SQLException sqle)
+		{
+			throw new DatabaseException(sqle);
+		}
+		return result;
 	}
 
 }

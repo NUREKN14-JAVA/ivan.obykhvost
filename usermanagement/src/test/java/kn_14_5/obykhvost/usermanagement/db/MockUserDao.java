@@ -53,4 +53,9 @@ public class MockUserDao implements UserDao {
 
 	}
 
+	@Override
+	public Collection find(String firstName, String lastName) throws DatabaseException {
+		throw new UnsupportedOperationException();
+	}
+
 }
