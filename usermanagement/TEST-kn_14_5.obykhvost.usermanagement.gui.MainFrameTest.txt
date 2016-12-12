@@ -1,5 +1,5 @@
 Testsuite: kn_14_5.obykhvost.usermanagement.gui.MainFrameTest
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.069 sec
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.063 sec
 ------------- Standard Error -----------------
 java.lang.NullPointerException
 	at kn_14_5.obykhvost.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:69)
@@ -28,7 +28,7 @@ java.lang.NullPointerException
 	at java.lang.Thread.run(Unknown Source)
 ------------- ---------------- ---------------
 
-Testcase: testEditUser took 0.212 sec
+Testcase: testEditUser took 0.238 sec
 	Caused an ERROR
 interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
 java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
@@ -72,7 +72,7 @@ java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.d
 	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
 	at java.lang.Thread.run(Unknown Source)
 
-Testcase: testBrowseControls took 0.212 sec
+Testcase: testBrowseControls took 0.203 sec
 	Caused an ERROR
 interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
 java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
@@ -94,7 +94,7 @@ java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.d
 	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
 	at java.lang.Thread.run(Unknown Source)
 
-Testcase: testUserDetails took 0.226 sec
+Testcase: testUserDetails took 0.207 sec
 	Caused an ERROR
 interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
 java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
@@ -116,7 +116,7 @@ java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.d
 	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
 	at java.lang.Thread.run(Unknown Source)
 
-Testcase: testDeleteUser took 0.208 sec
+Testcase: testDeleteUser took 0.204 sec
 	Caused an ERROR
 interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader
 java.lang.IllegalArgumentException: interface kn_14_5.obykhvost.usermanagement.db.UserDao is not visible from class loader

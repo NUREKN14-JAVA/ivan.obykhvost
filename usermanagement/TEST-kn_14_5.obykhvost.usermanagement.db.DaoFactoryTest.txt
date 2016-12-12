@@ -1,4 +1,4 @@
 Testsuite: kn_14_5.obykhvost.usermanagement.db.DaoFactoryTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 
-Testcase: testGetUserDao took 0.021 sec
+Testcase: testGetUserDao took 0.004 sec

@@ -13,20 +13,7 @@ public class MockUserDao implements UserDao {
 	
 	public MockUserDao()
 	{
-		User user = new User();
-		user.setId(id);
-		user.setFirstName("Vasya");
-		user.setLastName("Pupkin");
-		Calendar calendar = Calendar.getInstance();
-		calendar.set(1998, Calendar.APRIL, 25);
-		user.setDateOfBirth(calendar.getTime());
-		users.put(id++, user);
-		user.setId(id);
-		user.setFirstName("Carl");
-		user.setLastName("Marx");
-		calendar.set(1818, Calendar.MAY, 5);
-		user.setDateOfBirth(calendar.getTime());
-		users.put(id++, user);
+		
 	}
 	
 	@Override
